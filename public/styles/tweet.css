@@ -1,0 +1,46 @@
+.container {
+  width: 90%;
+}
+
+.container input {
+  background-color: #54414E;
+  /* border: none; */
+  color: #FFFF;
+  padding: 3px 4px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Bungee', cursive;
+
+}
+
+.new-tweet { 
+  width: 100%;
+}
+
+.new-tweet > form > textarea {
+  resize: none;
+  outline: none;
+  width: 100%;
+  background-color: inherit;
+  overflow: hidden;
+  resize: none;
+  border: none;
+  /* border: 10px black; */
+  border-bottom: 4px #54414E solid;
+
+  
+}
+
+.counter {
+  float: right;
+  font-family: 'Bungee', cursive;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+
+

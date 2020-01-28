@@ -16,10 +16,18 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #A790A5;
+  font-family: 'Source Sans Pro', sans-serif;
+  /* text-align: center; */
   font-size: 24px;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ body main {
+  
+   margin:0px auto;
+   width: 90%;
+ }
