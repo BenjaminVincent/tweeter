@@ -81,7 +81,6 @@ const data = [
 
  const renderTweets = (tweets) => {
   for (const tweet of tweets) {
-    console.log(tweet);
     let render = createTweetElement(tweet);
     $('#tweet-container').append(render);
   }
