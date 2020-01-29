@@ -18,9 +18,34 @@ const tweetData = {
   "created_at": 1461116232227
 }
 
+const data = [
+  {
+    "user": {
+      "name": "Newton",
+      "avatars": "https://i.imgur.com/73hZDYK.png"
+      ,
+      "handle": "@SirIsaac"
+    },
+    "content": {
+      "text": "If I have seen further it is by standing on the shoulders of giants"
+    },
+    "created_at": 1461116232227
+  },
+  {
+    "user": {
+      "name": "Descartes",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@rd" },
+    "content": {
+      "text": "Je pense , donc je suis"
+    },
+    "created_at": 1461113959088
+  }
+]
+
 // Returns article
  const createTweetElement = (tweetData) => {
-  const $article = $('<article>');
+  const $tweet = $('<article>');
 
   // Grab from tweetData
   const name = tweetData.user.name;
@@ -28,12 +53,6 @@ const tweetData = {
   const avatar = tweetData.user.avatars;
   const handle = tweetData.user.handle;
   const dateCreated = tweetData.created_at;
-
-  console.log("NAME:", name);
-  console.log("INPUT:", input);
-  console.log("AVATAR:", avatar);
-  console.log("HANDLE:", handle);
-  console.log("DATE CREATED:", dateCreated);
 
   const $header = $('<header>', {'class': 'tweet-header'});
   const $footer = $('<footer>', {'class': 'tweet-footer'});
@@ -52,22 +71,26 @@ const tweetData = {
 
 
   $text.text(input);
-  $article.append($header);
-  $article.append($text);
-  $article.append($footer);
+  $tweet.append($header);
+  $tweet.append($text);
+  $tweet.append($footer);
 
- return $article;
+ return $tweet;
   
  };
 
+ const renderTweets = (tweets) => {
+  for (const tweet of tweets) {
+    console.log(tweet);
+    let render = createTweetElement(tweet);
+    $('#tweet-container').append(render);
+  }
+}
+
 
  const $tweet1 = createTweetElement(tweetData);
- const $tweet2 = createTweetElement(tweetData);
- const $tweet3 = createTweetElement(tweetData);
 
 $(document).ready(function() {
-  $('#tweet-container').append($tweet1);
-  $('#tweet-container').append($tweet2);
-  $('#tweet-container').append($tweet3);
+  renderTweets(data);
 })
 
