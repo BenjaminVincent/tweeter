@@ -15,12 +15,20 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css"/>
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css"/>
+    
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+
+    <!-- Char Count JS-->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+    <!-- Tweet article JS-->
+    <script type="text/javascript" src="/scripts/tweet-article.js"></script>
+
   </head>
 
   <body>
@@ -30,12 +38,12 @@
       <span class ="rightnav"><b>Write</b><span class="glyphicon glyphicon-chevron-down"></span> a new tweet</span>
       
     </nav>
-    <header>
+    <header id="profile">
       <!-- <div id="profile-pic"> -->
           <img src="/images/profile-hex.png"> 
       <!-- </div> -->
       <br>
-      <div id="usernames">
+      <div id="username">
           <h2>Benjamin Vincent</h2>
       </div>
   </header>
@@ -45,11 +53,12 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST">
-          <textarea rows="1" name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet">
-          <span class="counter">140</span>
+          <textarea id="tweet-area" rows="2" name="text" placeholder="What are you humming about?"></textarea>
+          <input id="btn" type="submit" value="Tweet">
+          <span id="counter">140</span>
         </form>
       </section>
+      <section class="tweet-container"></section>
     </main>
   </body>
 </html>

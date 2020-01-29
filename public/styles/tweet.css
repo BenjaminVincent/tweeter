@@ -19,28 +19,99 @@
 }
 
 .new-tweet > form > textarea {
-  resize: none;
   outline: none;
   width: 100%;
   background-color: inherit;
   overflow: hidden;
   resize: none;
   border: none;
-  /* border: 10px black; */
   border-bottom: 4px #54414E solid;
-
-  
 }
 
-.counter {
+#counter {
   float: right;
   font-family: 'Bungee', cursive;
 }
 
-h2 {
+#username {
   display: flex;
+  color: #FFFF;
   justify-content: center;
 }
+
+article {
+  margin-top: 36px;
+  margin-bottom: 36px;
+  width: 100%;
+  height: 200px;
+  border: 4px #54414E solid;
+}
+
+
+article:hover {
+  box-shadow: 3px 3px;
+  text-shadow: 1px 1px;
+}
+
+
+
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+  height: 40%; 
+  width: 100%;
+}
+
+.tweet-footer {
+  border: none;
+  border-top: 4px #54414E solid;
+  width: 98%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-img {
+  opacity: .8;
+  height: 50px;
+}
+
+article:hover .tweet-img {
+  opacity: 1;
+}
+
+article:hover .tweet-handler {
+  opacity: 1;
+}
+
+
+.tweet-name {
+  margin-left: 8px;
+}
+
+.tweet-handler {
+  margin-top: 20px;
+  margin-right: 15px;
+  opacity: 0;
+}
+
+.tweet-text {
+  width: 100%;
+  margin-left: 24px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+
+
 
 
 
