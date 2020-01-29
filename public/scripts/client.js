@@ -33,9 +33,21 @@ const data = [
   },
   {
     "user": {
+      "name": "Steve",
+      "avatars": "https://i.imgur.com/73hZDYK.png"
+      ,
+      "handle": "@Wewe-Thompson"
+    },
+    "content": {
+      "text": "Hey I'm steve"
+    },
+    "created_at": 1461116232227
+  },
+  {
+    "user": {
       "name": "Descartes",
       "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
+      "handle": "@BowlCutDude999" },
     "content": {
       "text": "Je pense , donc je suis"
     },
@@ -71,9 +83,9 @@ const data = [
 
 
   $text.text(input);
-  $tweet.append($header);
-  $tweet.append($text);
-  $tweet.append($footer);
+  $tweet.append($header, $text, $footer);
+  // $tweet.append($text);
+  // $tweet.append($footer);
 
  return $tweet;
   
@@ -89,7 +101,27 @@ const data = [
 
  const $tweet1 = createTweetElement(tweetData);
 
-$(document).ready(function() {
-  renderTweets(data);
+$(document).ready(() => {
+  // const BASE_URL = 'http://localhost:8080';
+  // renderTweets(data);
+  const $form = $('#tweet-container-form');
+
+  
+  $form.submit((event) => {
+    event.preventDefault();
+    $.ajax({
+      url: '/tweets', 
+      method: 'POST',
+      data: $form.serialize(),
+      success: (post) => {
+        console.log(post);
+        // renderTweets(post);
+        $('#tweet-area').val('').focus();
+      },
+      error: (error) => {
+        console.log(error);
+      }
+    })
+  });
 })
 
