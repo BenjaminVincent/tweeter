@@ -31,3 +31,26 @@ body {
    margin:0px auto;
    width: 90%;
  }
+
+
+ @media only screen and (min-width: 768px) {
+    /* body {
+      background-color: blue;
+    }  */
+  }
+
+  @media only screen and (min-width: 1024px) {
+    body {
+      display: flex;
+      background-color: #A790A5;
+    }
+    header.profile {
+      margin: 9rem;
+      margin-top: 15rem;
+    }
+    .container {
+      margin-top: 7rem;
+      margin-right: 2rem;
+    }
+
+  }

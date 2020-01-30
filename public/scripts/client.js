@@ -83,13 +83,12 @@ const escape =  function(str) {
     $('.tweet-error').empty();
     
     const $errorBox = $('.tweet-error');
-    // const $wrapErrorBox = $('<div>', {'class': 'wrap-error-box'})
     $errorBox.append(`
-    <div class='wrap-error-box'>
-      <i class="fas fa-exclamation-triangle"></i>
-      ${message}
-      <i class="fas fa-exclamation-triangle"></i>
-    <div>
+      <div class='wrap-error-box'>
+        <i class="fas fa-exclamation-triangle"></i>
+        ${message}
+        <i class="fas fa-exclamation-triangle"></i>
+      <div>
     `);
   };
 
