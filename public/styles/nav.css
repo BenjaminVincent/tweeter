@@ -3,6 +3,8 @@
 
 .navbar {
   position: fixed;
+  display: flex;
+  justify-content: space-between;
   top: 0;
   z-index: 999;
   width: 100%;
@@ -19,9 +21,16 @@
 }
 
 .navbar .rightnav {
-  float: right;
+  /* display: inline; */
+  /* float: right; */
   font-size: 24px; 
   font-family: 'Source Sans Pro', sans-serif;
   
+}
+
+.navbar .fa-angle-double-down {
+  display: block;
+  text-align: center;
+
 }
 
