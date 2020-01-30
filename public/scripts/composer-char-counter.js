@@ -10,8 +10,8 @@ $(document).ready(function() {
     $("#counter").text(remaining);
     if (remaining < 0) {
       tweetable = false;
-      document.getElementById('counter').style.color = "#ff5959";
-      document.getElementById('tweet-area').style.color = "#ff5959";
+      document.getElementById('counter').style.color = "#d14343";
+      document.getElementById('tweet-area').style.color = "#d14343";
     } else {
       tweetable = true;
       document.getElementById('counter').style.color = "#545149";

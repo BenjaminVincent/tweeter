@@ -127,6 +127,22 @@ article:hover .tweet-handle {
 }
 
 
+.tweet-error {
+  border-radius: 4px;
+  margin-top: 36px;
+  margin-bottom: 36px;
+  width: 100%;
+  height: 40px;
+  border: 4px #d14343 solid;
+}
+
+
+.wrap-error-box {
+  color: #d14343;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 

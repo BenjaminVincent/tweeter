@@ -70,29 +70,45 @@ const escape =  function(str) {
   };
 
   const sliderHeader = () => {
+    $('.new-tweet').hide();
     $(document).ready(() => {
         $('.fa-angle-double-down').click(() => {
-          isUp = false;
           $('.new-tweet').slideToggle();
-          $('#tweet-container').scrollTop();
         })
-
     });
+  };
+
+  const reportErrorMessage = (message) => {
+    $('.tweet-error').slideDown();
+    $('.tweet-error').empty();
+    
+    const $errorBox = $('.tweet-error');
+    // const $wrapErrorBox = $('<div>', {'class': 'wrap-error-box'})
+    $errorBox.append(`
+    <div class='wrap-error-box'>
+      <i class="fas fa-exclamation-triangle"></i>
+      ${message}
+      <i class="fas fa-exclamation-triangle"></i>
+    <div>
+    `);
   };
 
   $(document).ready(() => {
 
     const $form = $('#tweet-container-form');
     const $text = $('#tweet-area');
+    $('.tweet-error').hide();
     sliderHeader();
     loadTweets();
+    
     $form.submit((event) => {
       event.preventDefault();
       if ($text.val().length > 140) {
-        return alert("Not a valid tweet!");
+        return reportErrorMessage("The tweet must be under the character count!");
       } else if ($text.val() === '') {
-      return alert("Not a valid tweet!");
-      }  
+        return reportErrorMessage('Comon, saay sumpin!');
+      }
+      $('.tweet-error').slideUp();
         $.ajax({
           url: '/tweets', 
           method: 'POST',
@@ -108,6 +124,4 @@ const escape =  function(str) {
         })
         return false;
       });
-
 })
-
