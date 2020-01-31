@@ -14,12 +14,12 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Dependencies
 
-- Node.js
-- Express
-- EJS
-- bcrypt
 - body-parser
-- cookie-session
+- Chance
+- Express
+- Md5
+- Nodemon
+
 
 ## Getting Started
 
