@@ -16,15 +16,12 @@ html {
 
 body {
   color: #545149;
-  background-color: #A790A5;
+  background-color: #E6EBE0;
   font-family: 'Source Sans Pro', sans-serif;
   /* text-align: center; */
   font-size: 24px;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 
  body main {
   
@@ -42,10 +39,9 @@ body {
   @media only screen and (min-width: 1024px) {
     body {
       display: flex;
-      /* background-color: #A790A5; */
     }
     nav.navbar {
-      background-color: #54414E;
+      background-color: #5CA4A9;
     }
     header.profile {
       margin: 9rem;
