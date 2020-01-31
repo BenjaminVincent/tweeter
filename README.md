@@ -24,4 +24,4 @@ This repository is the starter code for the project: Students will fork and clon
 ## Getting Started
 
 - Install all dependencies (using the `npm install` command).
-- Run the development web server using the `node express_server.js` command.
+- Run the development web server using the `npm run local` command.
