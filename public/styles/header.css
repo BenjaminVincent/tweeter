@@ -1,8 +1,8 @@
 .profile {
   display: flex;
-  height: 400px;
+  height: 520px;
   width: 100%; 
-  margin-top: 120px;
+  /* margin-top: 120px; */
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;

@@ -4,7 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Returns article
 
  const createTweetElement = (tweetData) => {
   const $tweet = $('<article>');
@@ -28,7 +27,7 @@
     <span class="tweet-handle">${handle}</span>
   `);
 
-  $footer.append("Footer Left");
+  $footer.append(formatTime(dateCreated));
   $footer.append(`
   <span class="tweet-icon">
     <i class="fas fa-flag"></i>
@@ -39,9 +38,8 @@
 
   $text.text(input);
   $tweet.append($header, $text, $footer);
-  console.log("TWEET:", $tweet);
+
  return $tweet;
-  
  };
 
  const renderTweets = (tweets) => {
@@ -74,6 +72,9 @@ const escape =  function(str) {
     $(document).ready(() => {
         $('.fa-angle-double-down').click(() => {
           $('.new-tweet').slideToggle();
+          if ($('.new-tweet').is(':visible')){
+            $('#tweet-area').focus();
+          }
         })
     });
   };
@@ -90,6 +91,25 @@ const escape =  function(str) {
         <i class="fas fa-exclamation-triangle"></i>
       <div>
     `);
+  };
+
+  const formatTime = (dateCreated) => {
+    const timeSinceCreation = Date.now() - dateCreated;
+    const minutes = Math.floor(timeSinceCreation / 60000);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+    const weeks = Math.floor(days / 7);
+    const months = Math.floor(weeks / 4);
+    const years = Math.floor(months / 12);
+
+    if (minutes <= 1) return `Just now`;
+    else if (minutes < 60) return `${minutes} minutes ago`;
+    else if (hours < 24) return `${hours} hours ago`;
+    else if (days < 14) return `${days} days ago`;
+    else if (weeks < 8) return `${weeks} weeks ago`;
+    else if (months < 24) return `${months} months ago`;
+    else return `${years} years ago`;
+
   };
 
   $(document).ready(() => {

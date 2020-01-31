@@ -34,15 +34,18 @@ body {
 
 
  @media only screen and (min-width: 768px) {
-    /* body {
-      background-color: blue;
-    }  */
+    .navbar {
+      background-color: none;
+    }
   }
 
   @media only screen and (min-width: 1024px) {
     body {
       display: flex;
-      background-color: #A790A5;
+      /* background-color: #A790A5; */
+    }
+    nav.navbar {
+      background-color: #54414E;
     }
     header.profile {
       margin: 9rem;
