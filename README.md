@@ -8,8 +8,8 @@ This repository is the starter code for the project: Students will fork and clon
 ## Final Product
 
 
-!["Screenshot of front page"](https://github.com/BenjaminVincent/tweeter/blob/master/screenshots/front-page-desktop.png?raw=true)
-!["Screenshot of small front page"](https://github.com/BenjaminVincent/tweeter/blob/master/screenshots/front-page-mobile.png?raw=true)
+!["Screenshot of front page"](https://github.com/BenjaminVincent/tweeter/blob/master/docs/front-page-desktop.png?raw=true)
+!["Screenshot of small front page"](https://github.com/BenjaminVincent/tweeter/blob/master/docs/front-page-mobile.png?raw=true)
 
 
 ## Dependencies
